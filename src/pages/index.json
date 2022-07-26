@@ -1,0 +1,303 @@
+{
+    "name": "首页",
+    "file": "index",
+    "type": "index",
+    "description": "首页模板文件",
+    "order": 5,
+    "more": {
+        "vars": {},
+        "widgets": {
+            "banner": {
+                "order": 1.0,
+                "title": "首页横幅",
+                "display": 1,
+                "vars": {
+                    "title": {
+                        "order": 1.0,
+                        "title": "主标题",
+                        "value": "ZeroCMF",
+                        "type": "text"
+                    },
+                    "desc": {
+                        "order": 2.0,
+                        "title": "副标题",
+                        "value": "一款基于Go-Zero框架的开源内容管理框架，支持微服务，让WEB开发更快",
+                        "type": "textarea"
+                    },
+                    "background": {
+                        "order": 3.0,
+                        "title": "背景图",
+                        "value": "/images/1920x1080.png",
+                        "type": "image"
+                    }
+                }
+            },
+            "categories": {
+                "order": 2.0,
+                "title": "推荐位",
+                "display": "1",
+                "vars": {
+                    "array": {
+                        "title": "特色分类",
+                        "value": [
+                            {
+                                "title": "现代框架",
+                                "desc": "前后端分离，API友好，SSR适配，SEO友好",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/VriUmzNjDnjoFoFFZvuh.svg",
+                                "href": ""
+                            },
+                            {
+                                "title": "免费开源",
+                                "desc": "基于MIT协议开源，可商业使用，更自由",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/smwQOoxCjXVbNAKMqvWk.svg",
+                                "href": ""
+                            },
+                            {
+                                "title": "权限管理",
+                                "desc": "内置RBAC权限管理，管理权限更自由",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/hBbIHzUsSbSxrhoRFYzi.svg",
+                                "href": ""
+                            },
+                            {
+                                "title": "微服务",
+                                "desc": "支持GRPC微服务，快速、高效",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/hBbIHzUsSbSxrhoRFYzi.svg",
+                                "href": ""
+                            },
+                            {
+                                "title": "丰富的生态",
+                                "desc": "应用市场让建站，商城，博客，小程序等一键搞定",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/VriUmzNjDnjoFoFFZvuh.svg",
+                                "href": ""
+                            },
+                            {
+                                "title": "社区氛围好",
+                                "desc": "开源互助，友爱共享。热心的小伙伴免费互助解决问题",
+                                "bg": "https://gw.alipayobjects.com/zos/rmsportal/hBbIHzUsSbSxrhoRFYzi.svg",
+                                "href": ""
+                            }
+                        ],
+                        "type": "array",
+                        "item": {
+                            "title": {
+                                "title": "标题",
+                                "value": "",
+                                "type": "text",
+                                "order": "1"
+                            },
+                            "desc": {
+                                "title": "描述",
+                                "value": "",
+                                "type": "textarea",
+                                "order": "2"
+                            },
+                            "bg": {
+                                "title": "背景",
+                                "value": "",
+                                "type": "image",
+                                "order": "3"
+                            },
+                            "url": {
+                                "title": "地址",
+                                "value": "",
+                                "type": "text",
+                                "order": "4"
+                            }
+                        },
+                        "order": 2.0
+                    }
+                }
+            },
+            "products": {
+                "order": 3.0,
+                "title": "推荐产品组件",
+                "display": "1",
+                "vars": {
+                    "title": {
+                        "order": 1.0,
+                        "title": "主标题",
+                        "value": "热门产品",
+                        "type": "text"
+                    },
+                    "desc": {
+                        "order": 2.0,
+                        "title": "副标题",
+                        "value": "精选优质的产品",
+                        "type": "text"
+                    },
+                    "more":{
+                        "order": 3.0,
+                        "title": "查看全部",
+                        "href":"",
+                        "value": "查看全部",
+                        "type": "button"
+                    },
+                    "array": {
+                        "order": 4.0,
+                        "title": "推荐产品",
+                        "value": "1",
+                        "type": "tableSelect",
+                        "tip": "请选择页面",
+                        "dataSource": {
+                            "api": "portal/category",
+                            "multi": true
+                        },
+                        "rule": {
+                            "require": true
+                        },
+                        "message": {
+                            "require": "不能为空"
+                        }
+                    }
+                }
+            },
+            "number": {
+                "order": 4.0,
+                "title": "数据展示",
+                "display": "1",
+                "vars": {
+                    "background": {
+                        "title": "背景图",
+                        "value": "/images/1920x373.png",
+                        "type": "image",
+                        "order": "1"
+                    },
+                    "array": {
+                        "title": "数据展示",
+                        "value": [
+                            {
+                                "title": "88888",
+                                "desc": "累计成交量"
+                            },
+                            {
+                                "title": "99.99%",
+                                "desc": "客户满意度"
+                            },
+                            {
+                                "title": "24H",
+                                "desc": "7✖️24极速响应"
+                            },
+                            {
+                                "title": "9999999",
+                                "desc": "成交量"
+                            }
+                        ],
+                        "type": "array",
+                        "item": {
+                            "title": {
+                                "title": "标题",
+                                "value": "",
+                                "type": "text",
+                                "order": "1"
+                            },
+                            "desc": {
+                                "title": "描述",
+                                "value": "",
+                                "type": "textarea",
+                                "order": "2"
+                            }
+                        },
+                        "order": 2.0
+                    }
+                }
+            },
+            "about": {
+                "order": 5.0,
+                "title": "关于我们",
+                "display": 1,
+                "vars": {
+                    "title": {
+                        "order": 1.0,
+                        "title": "主标题",
+                        "value": "关于我们",
+                        "type": "text"
+                    },
+                    "desc": {
+                        "order": 2.0,
+                        "title": "副标题",
+                        "value": "年轻·活力·迸发向上",
+                        "type": "text"
+                    },
+                    "thumbnail": {
+                        "order": 3.0,
+                        "title": "公司缩略图",
+                        "value": "/images/1920x1080.png",
+                        "type": "image"
+                    },
+                    "content": {
+                        "order": 4.0,
+                        "title": "公司描述",
+                        "value": "某某某是一家以线上联系销售+为主导、以房地产交易为主营业务，在全国拥有12家子公司、19家分公司，年销售额超2200亿元的大型企业集团。 嘉绯城以O2O经纪业务、新房电商两大核心业务板块，致力于打造成为全国房地产行业提供线上与线下（O2O）全渠道营销解决方案的房地产互联网平台，为服务行业、服务经纪公司、服务经纪人而来。",
+                        "type": "textarea"
+                    },
+                    "button": {
+                        "order": 5.0,
+                        "title": "按钮",
+                        "value": "了解更多",
+                        "href": "",
+                        "type": "button"
+                    }
+                }
+            },
+            "news": {
+                "order": 6.0,
+                "title": "推荐新闻组件",
+                "display": "1",
+                "vars": {
+                    "title": {
+                        "order": 1.0,
+                        "title": "主标题",
+                        "value": "新闻资讯",
+                        "type": "text"
+                    },
+                    "desc": {
+                        "order": 2.0,
+                        "title": "副标题",
+                        "value": "了解我们的最新动态",
+                        "type": "text"
+                    },
+                    "more":{
+                        "order": 3.0,
+                        "title": "查看全部",
+                        "link":"",
+                        "value": "查看全部",
+                        "type": "button"
+                    },
+                    "left": {
+                        "order": 4.0,
+                        "title": "左侧推荐新闻",
+                        "value": "1",
+                        "type": "tableSelect",
+                        "dataSource": {
+                            "api": "portal/category",
+                            "multi": true
+                        },
+                        "tip": "请选择页面",
+                        "rule": {
+                            "require": true
+                        },
+                        "message": {
+                            "require": "不能为空"
+                        }
+                    },
+                    "right": {
+                        "order": 5.0,
+                        "title": "右侧推荐新闻",
+                        "value": "1",
+                        "type": "tableSelect",
+                        "dataSource": {
+                            "api": "portal/category",
+                            "multi": true
+                        },
+                        "rule": {
+                            "require": true
+                        },
+                        "message": {
+                            "require": "不能为空"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
