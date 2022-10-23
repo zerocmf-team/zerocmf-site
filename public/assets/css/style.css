@@ -1,0 +1,201 @@
+@import url("./poppins.css");
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-weight: normal;
+  font-style: normal;
+  color: #6c727d;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  overflow-x: hidden;
+}
+
+body h1,body h2,body h3,body h4,body h5,body h6 {
+  color: #0A1426;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.header {
+  position: absolute;
+  background-color: transparent;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header > .container > .primary-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > .container > .primary-menu .site-branding {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.header > .container > .primary-menu .site-branding a{
+  color: #333;
+}
+
+.header > .container > .primary-menu > .nav-menu > .main-menu ul,
+.header > .container > .primary-menu > .nav-menu > .main-menu li {
+  margin: 0;
+}
+
+.header > .container > .primary-menu > .nav-menu > .main-menu ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 25px;
+}
+
+.header > .container > .primary-menu > .nav-menu > .main-menu ul > li > a {
+  display: block;
+  font-size: 16px;
+  color: #0a1426;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 20px 0;
+  line-height: 1;
+  letter-spacing: 0.5em;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li.has-children
+  > a::after {
+  font-size: 14px;
+  content: '\F282';
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li
+  .sub-menu {
+  position: absolute;
+  left: 0;
+  top: 120%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 120px;
+  z-index: 99;
+  height: auto;
+  text-align: left;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li:hover
+  > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li
+  .sub-menu
+  li {
+  display: block;
+  margin: 0;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li
+  .sub-menu
+  li
+  a {
+  display: block;
+  padding: 7px 15px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  border-radius: 0;
+  line-height: 2;
+  margin: 0;
+  border-bottom: 1px solid #ececec;
+  color: #1b3255;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li
+  .sub-menu
+  li
+  a:hover {
+  background-color: #0061fe;
+  color: #fff;
+  border-color: transparent;
+}
+
+.header
+  > .container
+  > .primary-menu
+  > .nav-menu
+  > .main-menu
+  ul
+  > li
+  .sub-menu
+  li .sub-menu {
+    left: 100%;
+    top: 0%;
+  }

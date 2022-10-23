@@ -22,15 +22,23 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "@tinymce/tinymce-react": "^4.2.0",
+    "@zerocmf/component": "^1.0.0",
+    "antd-img-crop": "^4.2.8",
+    "immer": "^9.0.16",
     "react": "17.x",
+    "react-color": "^2.19.3",
     "react-dom": "17.x",
-    "umi": "^3.5.30"
+    "umi": "^3.5.30",
+    "use-immer": "^0.7.0"
   },
   "devDependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.5.30",
+    "aos": "^3.0.0-beta.6",
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.3",
     "koa": "^2.13.4",
@@ -40,6 +48,7 @@
     "koa-static": "^5.0.0",
     "lint-staged": "^10.0.7",
     "nodemon": "^2.0.19",
+    "parallax-js": "^3.1.0",
     "prettier": "^2.2.0",
     "typescript": "^4.1.2",
     "yorkie": "^2.0.0"

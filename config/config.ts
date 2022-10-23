@@ -17,7 +17,7 @@ export default defineConfig({
     default: 'zh-CN',
   },
   define: {
-    THEME: "艺术品",
+    THEME: "zerocmf",
     VERSION: "0.0.1",
   },
   routes,

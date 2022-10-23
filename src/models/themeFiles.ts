@@ -29,7 +29,7 @@ const ThemeFilesModel: ThemeFilesModelType = {
         fileData: {},
     },
     effects: {
-        *fetchPublic({ payload }, { call, put }) {
+        *fetchPublic({ payload }, { call, put }): any {
             let headerData = {}, footerData = {}
             const result = yield call(getThemeFiles, payload)
             if (result.code === 1) {
@@ -51,7 +51,7 @@ const ThemeFilesModel: ThemeFilesModelType = {
 
             return result
         },
-        *fetchThemeFile({ payload }, { call, put }) {
+        *fetchThemeFile({ payload }, { call, put }):any {
             let fileData: any = {}
             const result = yield call(getThemeFile, payload)
             if (result.code === 1) {

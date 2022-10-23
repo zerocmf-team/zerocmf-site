@@ -8,6 +8,8 @@ import Footer from '@/pages/public/Footer';
 import Index from '@/pages/index';
 import Search from '@/pages/Search';
 import NotFount from '@/pages/NotFount';
+import { useEffect } from 'react';
+import { Helmet } from 'umi';
 
 // 匹配自定义路由
 const matchRoute = (routes: any, url: string) => {
@@ -50,9 +52,29 @@ const renderPage = (route: any) => {
 
 const Routes = (props: any) => {
   const { global = {}, themeFiles = {} } = props;
-  const { route = {} } = global;
+  const { route = {}, seo = {} } = global;
+  const { title = '', keywords = '', description = '' } = seo;
+
+  useEffect(() => {
+    const AOS = require('aos');
+    const Parallax = require('parallax-js');
+    const elements: any = document.getElementsByClassName('scene');
+    elements?.forEach((item: any) => {
+      new Parallax(item);
+    });
+
+    AOS.init();
+  }, []);
+
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{title}</title>
+        <meta name="keywords" content={keywords}></meta>
+        <meta name="description" content={description}></meta>
+      </Helmet>
+
       <Header />
       {renderPage(route)}
       <Footer />
@@ -98,25 +120,31 @@ Routes.getInitialProps = (async (ctx: any) => {
   ];
 
   const route = matchRoute(routes, url);
-  const { name } = route;
 
-  await dispatch({
-    type: 'themeFiles/fetchPublic',
-    payload: { theme: THEME, is_public: 1 },
-  });
+  if (route) {
+    const { name } = route;
 
-  await dispatch({
-    type: 'themeFiles/fetchThemeFile',
-    payload: { theme: THEME, file: name },
-  });
+    await dispatch({
+      type: 'global/getSettings',
+    });
 
-  await dispatch({
-    type: 'global/saveState',
-    payload: {
-      route,
-    },
-  });
+    await dispatch({
+      type: 'themeFiles/fetchPublic',
+      payload: { theme: THEME, is_public: 1 },
+    });
 
+    await dispatch({
+      type: 'themeFiles/fetchThemeFile',
+      payload: { theme: THEME, file: name },
+    });
+
+    await dispatch({
+      type: 'global/saveState',
+      payload: {
+        route,
+      },
+    });
+  }
   return getState();
 }) as IGetInitialProps;
 
