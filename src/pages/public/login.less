@@ -1,0 +1,63 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrap {
+    position: relative;
+    border-radius: 5px;
+    padding: 15px 20px;
+    width: 300px;
+    background-color: #fff;
+
+    >.close {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px 20px;
+    }
+
+    >.titleWrap {
+      display: flex;
+
+      margin-bottom: 20px;
+
+      >.title {
+        flex: 1;
+        color: #000;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    .content {
+
+      .extra {
+        display: flex;
+        margin-bottom: 10px;
+
+        .item {
+
+          cursor: pointer;
+          flex: 1;
+
+          .link {
+            color: #1890ff;
+          }
+
+          &.forget {
+            text-align: right;
+          }
+        }
+      }
+
+      .agreement {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #767676;
+      }
+
+    }
+  }
+}

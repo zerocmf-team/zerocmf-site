@@ -9,14 +9,14 @@
 const proxy:any = {
     dev: {
         '/api/': {
-            target: 'http://localhost:9080',
+            target: 'http://www.zerocmf.com',
             changeOrigin: true,
             pathRewrite: {
                 '^': '',
             },
         },
         '/uploads/': {
-            target: 'http://localhost:9080',
+            target: 'http://www.zerocmf.com',
             changeOrigin: true,
             pathRewrite: {
                 '^': '',

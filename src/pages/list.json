@@ -1,0 +1,11 @@
+{
+    "name": "博客",
+    "file": "blog",
+    "type": "list",
+    "description": "博客模板文件",
+    "order": 5,
+    "more": {
+        "vars": {},
+        "widgets": {}
+    }
+}

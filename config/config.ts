@@ -6,7 +6,7 @@ const { REACT_APP_ENV } = process.env;
 
 const outputPath = 'dist/';
 const env = process.env.NODE_ENV;
-const publicPath = env === 'development' ? 'http://127.0.0.1:8000/' : outputPath;
+const publicPath = env === 'development' ? 'http://127.0.0.1:8000/' : '/';
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -33,4 +33,9 @@ export default defineConfig({
   outputPath,
   publicPath,
   webpack5: {},
+  chainWebpack(memo:any) {
+    memo.module.rule('ts-in-node_modules').include.clear();
+    memo.module.rule('mjs-rule').test(/.m?js/).resolve.set('fullySpecified', false);
+    return memo;
+  },
 });

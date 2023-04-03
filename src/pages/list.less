@@ -1,0 +1,95 @@
+.mainContent {
+  .list {
+    min-height: 400px;
+    .listItem {
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        font-synthesis: style;
+      }
+
+      .excerpt {
+        font-size: 14px;
+        color: #86909c;
+        margin-bottom: 20px;
+      }
+
+      .more {
+        font-size: 13px;
+        color: #121212;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+
+        .author {
+          flex: 1;
+        }
+
+        .extra {
+          flex: 1;
+          text-align: right;
+        }
+
+      }
+    }
+  }
+}
+
+.rightCard {
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 16px;
+
+  &>.title {
+    position: relative;
+    padding-left: 5px;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      content: " ";
+      width: 3px;
+      height: 15px;
+      background-color: #ff0000;
+    }
+    font-size: 16px;
+    font-weight: 600;
+    color: #18191a;
+    margin-bottom: 0;
+  }
+
+  .list {
+    .listItem {
+      display: flex;
+      padding-top: 10px;
+
+      .number {
+        color: #18191a;
+      }
+
+      .post {
+        flex: 1;
+        .postTitle {
+          color: #18191a;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .postDesc {
+          color: #999;
+          font-size: 12px;
+        }
+
+      }
+
+      .categoryName {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

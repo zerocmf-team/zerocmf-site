@@ -6,10 +6,10 @@ const { join, extname } = require('path');
 const root = join(__dirname, 'dist');
 const app = new Koa();
 
-host = "http://localhost:9080"
+host = "http://localhost:3000"
 
 app.use(proxy('/api', {
-  target: 'http://localhost:9080',
+  target:"http://www.zerocmf.com",
   pathRewrite: {  '^': '' },
   changeOrigin: true
 }))
@@ -57,7 +57,7 @@ app.use(async (ctx, next) => {
  *
  */
 
-app.use(mount('/dist', require('koa-static')(root)));
+app.use(mount('/', require('koa-static')(root)));
 
 app.listen(3000);
 console.log('http://localhost:3000');

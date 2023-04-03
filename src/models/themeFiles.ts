@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { Subscription, Effect } from 'dva';
+import { Effect } from 'dva';
 import { getThemeFiles, getThemeFile } from '@/services/themeFile';
 import { getPosts } from '@/services/portalPost';
 

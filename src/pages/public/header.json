@@ -1,0 +1,41 @@
+{
+  "name": "公共头部内容",
+  "file": "public/header",
+  "type": "public/header",
+  "description": "公共头部内容",
+  "is_public": 1,
+  "order": 1.0,
+  "more": {
+    "vars": {
+      "logo": {
+        "order": 1.0,
+        "title": "站点logo",
+        "value": "ZeroCMF",
+        "type": "text",
+        "tip": ""
+      },
+      "href": {
+        "order": 2.0,
+        "title": "跳转链接",
+        "value": "/",
+        "type": "text"
+      }
+    },
+    "widgets": {
+      "navs": {
+        "order": 1.0,
+        "title": "右侧导航",
+        "display": 1,
+        "vars": {
+          "main": {
+            "order": 1.0,
+            "title": "主导航",
+            "value": [],
+            "key": "main",
+            "type": "nav"
+          }
+        }
+      }
+    }
+  }
+}

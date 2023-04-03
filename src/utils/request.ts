@@ -55,20 +55,20 @@ const errorHandler = (error: { response: Response }): Response => {
 export const request = extend({
   errorHandler, // 默认错误处理
   // credentials: 'include', // 默认请求是否带上cookie
-  noToken: true,
   prefix: isBrowser() ? '' : global.host
 });
 
 
 export const authRequest = extend({
   errorHandler, // 默认错误处理
+  isToken:true,
   // credentials: 'include', // 默认请求是否带上cookie
 });
 
 authRequest.interceptors.request.use((url, options) => {
   const temp = { ...options };
-  const { noToken } = temp
-  if (isBrowser() && noToken == false) {
+  const { isToken } = temp
+  if (isBrowser() && isToken) {
     const tokenStr = localStorage.getItem('token')
     if (tokenStr) {
       const tokenObj = JSON.parse(tokenStr)

@@ -1,18 +1,13 @@
 export const getThemeVars = (json: any = {}) => {
-
     if (Object.keys(json).length === 0) {
         return null
     }
-
     const { vars = {} } = JSON.parse(JSON.stringify(json?.more))
-    // Object.keys(vars).forEach((key: any) => {
-    //     const item: any = vars[key]
-    //     const { value } = item
-    //     if (value !== undefined) {
-    //         vars[key] = value
-    //     }
-    // })
     return vars
+}
+
+export const getVarsAttr = (vars: any, varName: string, key: string = 'value') => {
+    return vars?.[varName]?.[key]
 }
 
 export const getThemeWidgets = (json: any = {}) => {
@@ -39,10 +34,6 @@ export const getThemeWidgets = (json: any = {}) => {
     //     })
     // })
     return result
-}
-
-export const getVarsAttr = (vars: any, varName: string, key: string = 'value') => {
-    return vars?.[varName]?.[key]
 }
 
 export const getWidgetsAttr = (widgets: any, widget: string, key: string = 'value') => {
